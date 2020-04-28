@@ -1,5 +1,5 @@
 {
-  "FilePath": "d:\\webSeminarski\\webSeminarski.csproj",
+  "FilePath": "d:\\webSeminarski\\code\\webSeminarski.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "3.0",
@@ -20521,48 +20521,48 @@
   "RootNamespace": "webSeminarski",
   "Documents": [
     {
-      "FilePath": "d:\\webSeminarski\\Views\\Home\\Privacy.cshtml",
-      "TargetPath": "Views\\Home\\Privacy.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\webSeminarski\\Views\\Ucenici\\Index.cshtml",
+      "FilePath": "d:\\webSeminarski\\code\\Views\\Ucenici\\Index.cshtml",
       "TargetPath": "Views\\Ucenici\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\webSeminarski\\Views\\_ViewStart.cshtml",
-      "TargetPath": "Views\\_ViewStart.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\webSeminarski\\Views\\Ucenici\\Display.cshtml",
-      "TargetPath": "Views\\Ucenici\\Display.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\webSeminarski\\Views\\Shared\\_Layout.cshtml",
+      "FilePath": "d:\\webSeminarski\\code\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\webSeminarski\\Views\\_ViewImports.cshtml",
-      "TargetPath": "Views\\_ViewImports.cshtml",
+      "FilePath": "d:\\webSeminarski\\code\\Views\\Home\\Privacy.cshtml",
+      "TargetPath": "Views\\Home\\Privacy.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\webSeminarski\\Views\\Home\\Index.cshtml",
+      "FilePath": "d:\\webSeminarski\\code\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\webSeminarski\\Views\\Shared\\Error.cshtml",
+      "FilePath": "d:\\webSeminarski\\code\\Views\\_ViewImports.cshtml",
+      "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\webSeminarski\\code\\Views\\Ucenici\\Display.cshtml",
+      "TargetPath": "Views\\Ucenici\\Display.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\webSeminarski\\code\\Views\\Shared\\Error.cshtml",
       "TargetPath": "Views\\Shared\\Error.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\webSeminarski\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FilePath": "d:\\webSeminarski\\code\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\webSeminarski\\code\\Views\\_ViewStart.cshtml",
+      "TargetPath": "Views\\_ViewStart.cshtml",
       "FileKind": "mvc"
     }
   ],

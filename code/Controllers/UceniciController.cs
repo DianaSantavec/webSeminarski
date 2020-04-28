@@ -13,32 +13,6 @@ namespace webSeminarski.Controllers
     {
         public IActionResult Index()
         {
-            /*List<string> lista_imena = new List<string>();
-            using (var connection = new SqlConnection("Integrated Security = true; Data Source = DESKTOP-FKPPP3H; Initial Catalog = web_seminarski")){
-                
-                SqlCommand read = new SqlCommand("SELECT ime FROM ucenici",connection);
-                
-                try{
-
-                    connection.Open();
-                    SqlDataReader reader = read.ExecuteReader();
-               
-                    while (reader.Read()){
-                        string ime;
-                        ime = reader[0].ToString();
-                        lista_imena.Add(ime);
-                    }
-                    connection.Close();
-                    return View(lista_imena);
-                }
-
-                catch (Exception){
-                    return View("~/Views/Shared/Error.cshtml");
-                }
-
-            }*/
-            
-            
             List<Ucenici>lista_ucenika = new List<Ucenici>();
             using (var connection = new SqlConnection("Integrated Security = true; Data Source = DESKTOP-FKPPP3H; Initial Catalog = web_seminarski")){
                 
