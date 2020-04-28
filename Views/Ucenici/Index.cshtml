@@ -1,7 +1,16 @@
-
+@model IEnumerable<Ucenici>
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Prikaz ucenika";
 }
 
-<h1>Index</h1>
+<h1>@ViewData["Title"]</h1>
 
+<ul>
+    @foreach (var ucenik in Model){
+        <li>
+            <a asp-controller="Ucenici"
+            asp-action="Display"
+            asp-route-id="@ucenik.id">@ucenik.ime @ucenik.prezime</a>
+        </li>
+    }
+</ul>

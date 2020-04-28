@@ -20536,6 +20536,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\webSeminarski\\Views\\Ucenici\\Display.cshtml",
+      "TargetPath": "Views\\Ucenici\\Display.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\webSeminarski\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"

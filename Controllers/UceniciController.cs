@@ -13,10 +13,10 @@ namespace webSeminarski.Controllers
     {
         public IActionResult Index()
         {
-            List<Ucenici> lista_ucenika = new List<Ucenici>();
-            using (var connection = new SqlConnection("Integrated Secutiry = true; Data Source = 111DESKTOP-FKPPP3H; Initial Catalog = web_seminarski")){
+            /*List<string> lista_imena = new List<string>();
+            using (var connection = new SqlConnection("Integrated Security = true; Data Source = DESKTOP-FKPPP3H; Initial Catalog = web_seminarski")){
                 
-                SqlCommand read = new SqlCommand("SELECT * FROM ucenici",connection);
+                SqlCommand read = new SqlCommand("SELECT ime FROM ucenici",connection);
                 
                 try{
 
@@ -24,12 +24,40 @@ namespace webSeminarski.Controllers
                     SqlDataReader reader = read.ExecuteReader();
                
                     while (reader.Read()){
-                        Ucenici ucenik = new Ucenici();
-                        ucenik.id = Convert.ToInt32(reader[0].ToString());
-                        ucenik.ime = reader[1].ToString();
-                        ucenik.prezime = reader[2].ToString();
-                        ucenik.prosek = Convert.ToDouble(reader[3].ToString());
-                        lista_ucenika.Add(ucenik);
+                        string ime;
+                        ime = reader[0].ToString();
+                        lista_imena.Add(ime);
+                    }
+                    connection.Close();
+                    return View(lista_imena);
+                }
+
+                catch (Exception){
+                    return View("~/Views/Shared/Error.cshtml");
+                }
+
+            }*/
+            
+            
+            List<Ucenici>lista_ucenika = new List<Ucenici>();
+            using (var connection = new SqlConnection("Integrated Security = true; Data Source = DESKTOP-FKPPP3H; Initial Catalog = web_seminarski")){
+                
+                SqlCommand read = new SqlCommand("SELECT * FROM ucenici",connection);
+                
+                try{
+
+                    connection.Open();
+
+                    SqlDataReader reader = read.ExecuteReader();
+               
+                    while (reader.Read()){
+                        Ucenici ucenik = new Ucenici();            
+                            ucenik.id = Convert.ToInt32(reader[0].ToString());
+                            ucenik.ime = reader[1].ToString();
+                            ucenik.prezime = reader[2].ToString();
+                            ucenik.prosek = Convert.ToDouble(reader[3].ToString());
+                            lista_ucenika.Add(ucenik);
+                        
                     }
                     connection.Close();
                     return View(lista_ucenika);
@@ -40,7 +68,40 @@ namespace webSeminarski.Controllers
                 }
 
             }
+
+        }
+
+       public IActionResult Display(int id){
+           
+            Ucenici ucenik = new Ucenici();
             
+            using (var connection = new SqlConnection("Integrated Security = true; Data Source = DESKTOP-FKPPP3H; Initial Catalog = web_seminarski")){
+                
+                SqlCommand read = new SqlCommand("SELECT * FROM ucenici",connection);
+                
+                try{
+
+                    connection.Open();
+
+                    SqlDataReader reader = read.ExecuteReader();
+               
+                    while (reader.Read()){
+                        if (Convert.ToInt32(reader[0].ToString()) == id){
+                            ucenik.id = Convert.ToInt32(reader[0].ToString());
+                            ucenik.ime = reader[1].ToString();
+                            ucenik.prezime = reader[2].ToString();
+                            ucenik.prosek = Convert.ToDouble(reader[3].ToString());
+                        }
+                    }
+                    connection.Close();
+                    return View(ucenik);
+                }
+
+                catch (Exception){
+                    return View("~/Views/Shared/Error.cshtml");
+                }
+
+            }
         }
     }
 }
